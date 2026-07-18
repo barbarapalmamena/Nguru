@@ -8,8 +8,7 @@
 .mainWrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 2;
-  max-height: 580px;
+  aspect-ratio: 1 / 1;
   background: var(--color-surface-1);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -17,6 +16,19 @@
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 640px) {
+  .mainWrapper {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainWrapper {
+    aspect-ratio: 3 / 2;
+    max-height: 580px;
+  }
 }
 
 .activeImageFrame {
@@ -37,16 +49,18 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: rgba(18, 18, 18, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(18, 18, 18, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   transition: background var(--transition-fast), transform var(--transition-fast), color var(--transition-fast);
 }
 
@@ -112,16 +126,26 @@
 
 .thumbBtn {
   position: relative;
-  width: 80px;
-  height: 54px;
+  width: 72px;
+  height: 48px;
   border-radius: var(--radius-sm);
   overflow: hidden;
   border: 2px solid transparent;
   cursor: pointer;
   background: var(--color-surface-2);
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   transition: border-color var(--transition-fast), opacity var(--transition-fast);
   opacity: 0.4;
   padding: 0;
+}
+
+@media (min-width: 640px) {
+  .thumbBtn {
+    width: 80px;
+    height: 54px;
+  }
 }
 
 .thumbBtn:hover {

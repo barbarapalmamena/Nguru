@@ -155,9 +155,25 @@
 }
 
 /* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 639px) {
+  .content {
+    padding-bottom: var(--space-12);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .title {
+    font-size: clamp(var(--text-4xl), 12vw, var(--text-6xl));
+  }
+
+  .subtitle {
+    font-size: var(--text-sm);
+  }
+}
+
 @media (min-width: 768px) {
   .scrollIndicator {
     display: flex;
   }
 }
-
