@@ -83,12 +83,23 @@ export default async function ProjectPage({ params }) {
           <div className={styles.projectImageBlock}>
             {project.videoSrc ? (
               project.videoSrc.includes('google.com') ? (
-                <iframe
-                  src={project.videoSrc.replace('uc?export=download&id=', 'file/d/').split('&')[0] + '/preview'}
-                  className={styles.projectMainVideoIframe}
-                  allow="autoplay; encrypted-media"
-                  allowFullScreen
-                />
+                (() => {
+                  // Extraer ID de Drive independientemente de si es uc?id= o file/d/
+                  let videoId = '';
+                  if (project.videoSrc.includes('id=')) {
+                    videoId = project.videoSrc.split('id=')[1].split('&')[0];
+                  } else if (project.videoSrc.includes('file/d/')) {
+                    videoId = project.videoSrc.split('file/d/')[1].split('/')[0];
+                  }
+                  return (
+                    <iframe
+                      src={`https://drive.google.com/file/d/${videoId}/preview`}
+                      className={styles.projectMainVideoIframe}
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                    />
+                  );
+                })()
               ) : (
                 <video
                   src={project.videoSrc}
