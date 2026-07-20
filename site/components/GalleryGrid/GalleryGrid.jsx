@@ -6,7 +6,6 @@ import Link from 'next/link';
 import styles from './GalleryGrid.module.css';
 
 const FILTERS = [
-  { id: 'all',      label: 'Todo' },
   { id: 'comida',   label: 'Fotografía de Alimentos' },
   { id: 'video',    label: 'Reels & Video' },
   { id: 'branding', label: 'Branding & Diseño' },
@@ -29,7 +28,7 @@ const SUBCATEGORY_FILTERS = {
  */
 export default function GalleryGrid({
   items = [],
-  initialCategory = 'all',
+  initialCategory = 'comida',
   showFilters = true,
   limit,
 }) {
@@ -46,9 +45,9 @@ export default function GalleryGrid({
   }
 
   const visibleItems = useCallback(() => {
-    let base = active === 'all' ? items : items.filter(i => i.category === active);
+    let base = items.filter(i => i.category === active);
 
-    if (subcategoryFilters && activeSub !== 'all') {
+    if (subcategoryFilters && activeSub) {
       base = base.filter(i => i.subcategory === activeSub);
     }
 
