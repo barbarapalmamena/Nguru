@@ -7,7 +7,7 @@ import styles from './GalleryGrid.module.css';
 
 const FILTERS = [
   { id: 'comida',   label: 'Fotografía de Alimentos' },
-  { id: 'famosos',  label: 'Fotografía de Famosos' },
+  { id: 'famosos',  label: 'Fotografía de Escenario' },
   { id: 'video',    label: 'Reels & Video' },
   { id: 'branding', label: 'Branding & Diseño' },
 ];
