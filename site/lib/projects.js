@@ -143,6 +143,33 @@ export const projects = [
     galleryFolder: 'fotografia domo/restaurant F&F',
     gallery: [],
   },
+  // ── Reels & Video ────────────────────────────────────────────
+  {
+    slug: 'video-educapro',
+    title: 'EducaPro',
+    category: 'video',
+    categoryLabel: 'Reels & Video',
+    year: '2025',
+    format: 'Video Corporativo / Publicitario',
+    image: '/images/hero-main.jpeg', // Fallback cover
+    videoSrc: '/images/videos/EducaPro V4 subtitulos.mp4',
+    alt: 'Video promocional EducaPro',
+    description: 'Producción de video institucional y publicitario con subtítulos para EducaPro.',
+    gallery: [],
+  },
+  {
+    slug: 'video-atletico-frutillar',
+    title: 'Atlético Frutillar',
+    category: 'video',
+    categoryLabel: 'Reels & Video',
+    year: '2025',
+    format: 'Reels / Video Deportivo',
+    image: '/images/hero-main.jpeg', // Fallback cover
+    videoSrc: '/images/videos/V2 ATLETICO FRUTILLAR.mp4',
+    alt: 'Video deportivo Atlético Frutillar',
+    description: 'Producción y edición de video dinámico y deportivo para Atlético Frutillar.',
+    gallery: [],
+  },
 ];
 
 export function getProjectBySlug(slug) {

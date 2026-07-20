@@ -81,14 +81,24 @@ export default async function ProjectPage({ params }) {
       <div className="container">
         <div className={styles.content}>
           <div className={styles.projectImageBlock}>
-            <Image
-              src={project.image}
-              alt={project.alt}
-              width={1200}
-              height={700}
-              className={styles.projectMainImg}
-              priority
-            />
+            {project.videoSrc ? (
+              <video
+                src={project.videoSrc}
+                controls
+                playsInline
+                className={styles.projectMainVideo}
+                poster={project.image}
+              />
+            ) : (
+              <Image
+                src={project.image}
+                alt={project.alt}
+                width={1200}
+                height={700}
+                className={styles.projectMainImg}
+                priority
+              />
+            )}
           </div>
           <div className={styles.projectInfoBlock}>
             <p className={styles.description}>{project.description}</p>
