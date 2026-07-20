@@ -1,11 +1,14 @@
-// lib/projects.js — datos de proyectos (reemplazar con datos reales)
+// lib/projects.js — datos de proyectos
 
 export const projects = [
+  // ── Fotografía de Alimentos › Dulces & Panadería ─────────────
   {
     slug: 'comercial-pasteleria-local',
-    title: 'Alfajor, Galletas, Cuchufli y Más',
-    category: 'comercial',
-    categoryLabel: 'Fotografía Comercial',
+    title: 'Alfajor, Galletas, Cuchuflí y Más',
+    category: 'comida',
+    subcategory: 'dulces',
+    categoryLabel: 'Fotografía de Alimentos',
+    subcategoryLabel: 'Dulces & Panadería',
     year: '2025',
     format: 'Fotografía de Alimentos',
     image: '/images/comida/Alfajor, Galletas, Cuchufli y Más/DSC07557-min.jpg',
@@ -17,8 +20,10 @@ export const projects = [
   {
     slug: 'comercial-alfajores-premium',
     title: 'Alfajores',
-    category: 'comercial',
-    categoryLabel: 'Fotografía Comercial',
+    category: 'comida',
+    subcategory: 'dulces',
+    categoryLabel: 'Fotografía de Alimentos',
+    subcategoryLabel: 'Dulces & Panadería',
     year: '2025',
     format: 'Fotografía de Alimentos',
     image: '/images/comida/alfajores/DSC07503-min.jpg',
@@ -30,8 +35,10 @@ export const projects = [
   {
     slug: 'comercial-dulces-del-sur',
     title: 'Alfajores 2',
-    category: 'comercial',
-    categoryLabel: 'Fotografía Comercial',
+    category: 'comida',
+    subcategory: 'dulces',
+    categoryLabel: 'Fotografía de Alimentos',
+    subcategoryLabel: 'Dulces & Panadería',
     year: '2025',
     format: 'Fotografía de Alimentos',
     image: '/images/comida/alfajores 2/DSC07173.jpg',
@@ -43,8 +50,10 @@ export const projects = [
   {
     slug: 'comercial-berlines',
     title: 'Berlines',
-    category: 'comercial',
-    categoryLabel: 'Fotografía Comercial',
+    category: 'comida',
+    subcategory: 'dulces',
+    categoryLabel: 'Fotografía de Alimentos',
+    subcategoryLabel: 'Dulces & Panadería',
     year: '2025',
     format: 'Fotografía de Alimentos',
     image: '/images/comida/Berlin/DSC07322-min.jpg',
@@ -53,11 +62,14 @@ export const projects = [
     galleryFolder: 'comida/Berlin',
     gallery: [],
   },
+  // ── Fotografía de Alimentos › Cóctel & Banquetería ───────────
   {
     slug: 'comercial-coctel',
     title: 'Cóctel',
-    category: 'comercial',
-    categoryLabel: 'Fotografía Comercial',
+    category: 'comida',
+    subcategory: 'coctel',
+    categoryLabel: 'Fotografía de Alimentos',
+    subcategoryLabel: 'Cóctel & Banquetería',
     year: '2025',
     format: 'Fotografía de Alimentos',
     image: '/images/comida/Coctel/_DSC4786.jpg',
@@ -66,6 +78,7 @@ export const projects = [
     galleryFolder: 'comida/Coctel',
     gallery: [],
   },
+  // ── Branding ─────────────────────────────────────────────────
   {
     slug: 'branding-logotipos',
     title: 'Logotipos',
@@ -87,4 +100,8 @@ export function getProjectBySlug(slug) {
 
 export function getProjectsByCategory(category) {
   return projects.filter(p => p.category === category);
+}
+
+export function getProjectsBySubcategory(category, subcategory) {
+  return projects.filter(p => p.category === category && p.subcategory === subcategory);
 }

@@ -6,19 +6,27 @@ import Link from 'next/link';
 import styles from './GalleryGrid.module.css';
 
 const FILTERS = [
-  { id: 'all',        label: 'Todo' },
-  { id: 'comercial',  label: 'Fotografía Comercial' },
-  { id: 'video',      label: 'Reels & Video' },
-  { id: 'branding',   label: 'Branding & Diseño' },
+  { id: 'all',      label: 'Todo' },
+  { id: 'comida',   label: 'Fotografía de Alimentos' },
+  { id: 'video',    label: 'Reels & Video' },
+  { id: 'branding', label: 'Branding & Diseño' },
 ];
+
+const SUBCATEGORY_FILTERS = {
+  comida: [
+    { id: 'all',    label: 'Todos los alimentos' },
+    { id: 'dulces', label: 'Dulces & Panadería' },
+    { id: 'coctel', label: 'Cóctel & Banquetería' },
+  ],
+};
 
 /**
  * GalleryGrid
  * @param {Object} props
- * @param {Array} props.items — Array of project objects
- * @param {string} [props.initialCategory] — Initial filter
- * @param {boolean} [props.showFilters] — Show filter buttons
- * @param {number} [props.limit] — Max items to show
+ * @param {Array}   props.items           — Array of project objects
+ * @param {string}  [props.initialCategory] — Initial filter
+ * @param {boolean} [props.showFilters]   — Show filter buttons
+ * @param {number}  [props.limit]         — Max items to show
  */
 export default function GalleryGrid({
   items = [],
@@ -26,26 +34,40 @@ export default function GalleryGrid({
   showFilters = true,
   limit,
 }) {
-  const [active, setActive] = useState(initialCategory);
+  const [active, setActive]           = useState(initialCategory);
+  const [activeSub, setActiveSub]     = useState('all');
 
-  const filtered = useCallback(() => {
-    const base = active === 'all' ? items : items.filter(i => i.category === active);
+  const subcategoryFilters = SUBCATEGORY_FILTERS[active] || null;
+
+  function handleCategoryChange(id) {
+    setActive(id);
+    setActiveSub('all'); // reset subcategory when changing category
+  }
+
+  const visibleItems = useCallback(() => {
+    let base = active === 'all' ? items : items.filter(i => i.category === active);
+
+    if (subcategoryFilters && activeSub !== 'all') {
+      base = base.filter(i => i.subcategory === activeSub);
+    }
+
     return limit ? base.slice(0, limit) : base;
-  }, [items, active, limit]);
+  }, [items, active, activeSub, limit, subcategoryFilters]);
 
-  const visibleItems = filtered();
+  const displayed = visibleItems();
 
   return (
     <div className={styles.wrapper}>
       {showFilters && (
-        <nav className={styles.filters} aria-label="Filtrar galería por categoría" role="navigation">
+        <nav aria-label="Filtrar galería por categoría" role="navigation">
+          {/* Filtros principales */}
           <ul className={styles.filterList}>
             {FILTERS.map(f => (
               <li key={f.id}>
                 <button
                   id={`filter-${f.id}`}
                   className={`${styles.filterBtn} ${active === f.id ? styles.filterActive : ''}`}
-                  onClick={() => setActive(f.id)}
+                  onClick={() => handleCategoryChange(f.id)}
                   aria-pressed={active === f.id}
                 >
                   {f.label}
@@ -53,14 +75,32 @@ export default function GalleryGrid({
               </li>
             ))}
           </ul>
+
+          {/* Subfiltros — aparecen solo si la categoría activa los tiene */}
+          {subcategoryFilters && (
+            <ul className={styles.subfilterList} aria-label="Filtrar por subcategoría">
+              {subcategoryFilters.map(sf => (
+                <li key={sf.id}>
+                  <button
+                    id={`subfilter-${sf.id}`}
+                    className={`${styles.subfilterBtn} ${activeSub === sf.id ? styles.subfilterActive : ''}`}
+                    onClick={() => setActiveSub(sf.id)}
+                    aria-pressed={activeSub === sf.id}
+                  >
+                    {sf.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
         </nav>
       )}
 
-      {visibleItems.length === 0 ? (
+      {displayed.length === 0 ? (
         <p className={styles.empty}>No hay proyectos en esta categoría todavía.</p>
       ) : (
         <ul className={styles.grid} aria-label="Galería de proyectos">
-          {visibleItems.map(item => (
+          {displayed.map(item => (
             <li key={item.slug} className={styles.item}>
               <Link
                 href={`/portfolio/${item.slug}`}
