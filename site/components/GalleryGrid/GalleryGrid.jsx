@@ -14,7 +14,6 @@ const FILTERS = [
 
 const SUBCATEGORY_FILTERS = {
   comida: [
-    { id: 'all',    label: 'Todos los alimentos' },
     { id: 'dulces', label: 'Dulces & Panadería' },
     { id: 'coctel', label: 'Cóctel & Banquetería' },
   ],
@@ -41,7 +40,9 @@ export default function GalleryGrid({
 
   function handleCategoryChange(id) {
     setActive(id);
-    setActiveSub('all'); // reset subcategory when changing category
+    // Set first subcategory as default when switching to a category that has subcategories
+    const subs = SUBCATEGORY_FILTERS[id];
+    setActiveSub(subs ? subs[0].id : 'all');
   }
 
   const visibleItems = useCallback(() => {
