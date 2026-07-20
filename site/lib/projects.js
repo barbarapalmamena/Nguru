@@ -92,6 +92,20 @@ export const projects = [
     galleryFolder: 'Logotipo',
     gallery: [],
   },
+  // ── Fotografía de Famosos ────────────────────────────────────
+  {
+    slug: 'famosos-sesion-1',
+    title: 'Fotografía de Famosos',
+    category: 'famosos',
+    categoryLabel: 'Fotografía de Famosos',
+    year: '2025',
+    format: 'Fotografía de Retrato',
+    image: '/images/famosos/portada.jpg',
+    alt: 'Fotografía de famosos',
+    description: 'Sesiones de fotografía con figuras públicas y personalidades.',
+    galleryFolder: 'famosos',
+    gallery: [],
+  },
 ];
 
 export function getProjectBySlug(slug) {
