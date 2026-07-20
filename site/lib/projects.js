@@ -116,6 +116,33 @@ export const projects = [
     galleryFolder: 'fotografia de modelos',
     gallery: [],
   },
+  // ── Fotografía de Espacios ───────────────────────────────────
+  {
+    slug: 'fotografia-domo',
+    title: 'Fotografía de Domo',
+    category: 'espacios',
+    categoryLabel: 'Fotografía de Espacios',
+    year: '2025',
+    format: 'Fotografía de Espacios / Arquitectura',
+    image: '/images/fotografia domo/domo/DSC08011.jpg',
+    alt: 'Fotografía exterior e interior de domo',
+    description: 'Registro fotográfico y tomas aéreas de domo geodésico y sus espacios interiores.',
+    galleryFolder: 'fotografia domo/domo',
+    gallery: [],
+  },
+  {
+    slug: 'fotografia-restaurant-ff',
+    title: 'Restaurant F&F',
+    category: 'espacios',
+    categoryLabel: 'Fotografía de Espacios',
+    year: '2025',
+    format: 'Fotografía de Espacios / Comercial',
+    image: '/images/fotografia domo/restaurant F&F/DSC01300.jpg',
+    alt: 'Fotografía interior de Restaurant F&F',
+    description: 'Sesión de fotografía de arquitectura y diseño de interiores para Restaurant F&F.',
+    galleryFolder: 'fotografia domo/restaurant F&F',
+    gallery: [],
+  },
 ];
 
 export function getProjectBySlug(slug) {
