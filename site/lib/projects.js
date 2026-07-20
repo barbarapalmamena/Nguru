@@ -102,6 +102,20 @@ export const projects = [
     galleryFolder: 'fotografia de escenario/santa feria',
     gallery: [],
   },
+  // ── Fotografía de Modelos ───────────────────────────────────
+  {
+    slug: 'fotografia-de-modelos',
+    title: 'Sesión de Modelos',
+    category: 'modelos',
+    categoryLabel: 'Fotografía de Modelos',
+    year: '2025',
+    format: 'Fotografía de Modelos / Sesión Exterior',
+    image: '/images/fotografia de modelos/DSC08137-min.jpg',
+    alt: 'Fotografía de sesión con modelos',
+    description: 'Sesión de fotografía artística y comercial con modelos en exteriores e interiores.',
+    galleryFolder: 'fotografia de modelos',
+    gallery: [],
+  },
 ];
 
 export function getProjectBySlug(slug) {
