@@ -97,6 +97,15 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.projectMainVideoIframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  background: #000;
+  border-radius: var(--radius-lg);
+  border: none;
+}
+
 /* Content */
 .content {
   padding-block: var(--space-16);

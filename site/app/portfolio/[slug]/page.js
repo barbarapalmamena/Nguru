@@ -82,13 +82,22 @@ export default async function ProjectPage({ params }) {
         <div className={styles.content}>
           <div className={styles.projectImageBlock}>
             {project.videoSrc ? (
-              <video
-                src={project.videoSrc}
-                controls
-                playsInline
-                className={styles.projectMainVideo}
-                poster={project.image}
-              />
+              project.videoSrc.includes('google.com') ? (
+                <iframe
+                  src={project.videoSrc.replace('uc?export=download&id=', 'file/d/').split('&')[0] + '/preview'}
+                  className={styles.projectMainVideoIframe}
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                />
+              ) : (
+                <video
+                  src={project.videoSrc}
+                  controls
+                  playsInline
+                  className={styles.projectMainVideo}
+                  poster={project.image}
+                />
+              )
             ) : (
               <Image
                 src={project.image}
