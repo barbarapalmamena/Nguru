@@ -4,7 +4,7 @@ export const projects = [
   // ── Fotografía de Alimentos › Dulces & Panadería ─────────────
   {
     slug: 'comercial-pasteleria-local',
-    title: 'Alfajor, Galletas, Cuchuflí y Más',
+    title: 'Pastelería Artesanal',
     category: 'comida',
     subcategory: 'dulces',
     categoryLabel: 'Fotografía de Alimentos',
@@ -19,7 +19,7 @@ export const projects = [
   },
   {
     slug: 'comercial-berlines',
-    title: 'Berlines',
+    title: 'Berlines & Repostería',
     category: 'comida',
     subcategory: 'dulces',
     categoryLabel: 'Fotografía de Alimentos',
@@ -35,7 +35,7 @@ export const projects = [
   // ── Fotografía de Alimentos › Cóctel & Banquetería ───────────
   {
     slug: 'comercial-coctel',
-    title: 'Cóctel',
+    title: 'Banquetería & Cóctel',
     category: 'comida',
     subcategory: 'coctel',
     categoryLabel: 'Fotografía de Alimentos',
@@ -51,7 +51,7 @@ export const projects = [
   // ── Branding & Flyers ─────────────────────────────────────────
   {
     slug: 'branding-logotipos',
-    title: 'Logotipos',
+    title: 'Logotipos & Marca',
     category: 'branding',
     subcategory: 'logotipos',
     categoryLabel: 'Branding y Diseño',
@@ -66,7 +66,7 @@ export const projects = [
   },
   {
     slug: 'flyers-eventos',
-    title: 'Flyers de Eventos & Fiestas',
+    title: 'Flyers Fiestas & Eventos',
     category: 'branding',
     subcategory: 'flyers',
     categoryLabel: 'Branding y Diseño',
@@ -96,7 +96,7 @@ export const projects = [
   },
   {
     slug: 'flyers-workshop',
-    title: 'Flyers Workshop & Talleres',
+    title: 'Flyers Workshops & Talleres',
     category: 'branding',
     subcategory: 'flyers',
     categoryLabel: 'Branding y Diseño',
@@ -166,7 +166,7 @@ export const projects = [
   // ── Fotografía de Espacios ───────────────────────────────────
   {
     slug: 'fotografia-domo',
-    title: 'Fotografía de Domo',
+    title: 'Fotografía de Arquitectura',
     category: 'espacios',
     categoryLabel: 'Fotografía de Espacios',
     year: '2025',
@@ -179,7 +179,7 @@ export const projects = [
   },
   {
     slug: 'fotografia-restaurant-ff',
-    title: 'Restaurant F&F',
+    title: 'Fotografía Restaurant F&F',
     category: 'espacios',
     categoryLabel: 'Fotografía de Espacios',
     year: '2025',
@@ -193,7 +193,7 @@ export const projects = [
   // ── Reels & Video ────────────────────────────────────────────
   {
     slug: 'video-educapro',
-    title: 'EducaPro',
+    title: 'Video Institucional EducaPro',
     category: 'video',
     categoryLabel: 'Reels & Video',
     year: '2025',
@@ -206,7 +206,7 @@ export const projects = [
   },
   {
     slug: 'video-atletico-frutillar',
-    title: 'Atlético Frutillar',
+    title: 'Video Deportivo Atlético Frutillar',
     category: 'video',
     categoryLabel: 'Reels & Video',
     year: '2025',
@@ -219,7 +219,7 @@ export const projects = [
   },
   {
     slug: 'reels-cafe-1',
-    title: 'Reels Café 1',
+    title: 'Reels Gastronómico 01',
     category: 'video',
     categoryLabel: 'Reels & Video',
     year: '2025',
@@ -232,7 +232,7 @@ export const projects = [
   },
   {
     slug: 'reels-cafe-2',
-    title: 'Reels Café 2',
+    title: 'Reels Gastronómico 02',
     category: 'video',
     categoryLabel: 'Reels & Video',
     year: '2025',
@@ -245,7 +245,7 @@ export const projects = [
   },
   {
     slug: 'reels-cafe-3',
-    title: 'Reels Café 3',
+    title: 'Reels Gastronómico 03',
     category: 'video',
     categoryLabel: 'Reels & Video',
     year: '2025',
@@ -258,7 +258,7 @@ export const projects = [
   },
   {
     slug: 'reels-cafe-4',
-    title: 'Reels Café 4',
+    title: 'Reels Gastronómico 04',
     category: 'video',
     categoryLabel: 'Reels & Video',
     year: '2025',
@@ -271,7 +271,7 @@ export const projects = [
   },
   {
     slug: 'reels-cafe-5',
-    title: 'Reels Café 5',
+    title: 'Reels Gastronómico 05',
     category: 'video',
     categoryLabel: 'Reels & Video',
     year: '2025',
@@ -284,7 +284,7 @@ export const projects = [
   },
   {
     slug: 'reels-cafe-6',
-    title: 'Reels Café 6',
+    title: 'Reels Gastronómico 06',
     category: 'video',
     categoryLabel: 'Reels & Video',
     year: '2025',
@@ -297,7 +297,7 @@ export const projects = [
   },
   {
     slug: 'reels-cafe-7',
-    title: 'Reels Café 7',
+    title: 'Reels Gastronómico 07',
     category: 'video',
     categoryLabel: 'Reels & Video',
     year: '2025',
@@ -310,7 +310,7 @@ export const projects = [
   },
   {
     slug: 'reels-cafe-8',
-    title: 'Reels Café 8',
+    title: 'Reels Gastronómico 08',
     category: 'video',
     categoryLabel: 'Reels & Video',
     year: '2025',
