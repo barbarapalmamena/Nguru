@@ -69,9 +69,6 @@ export default function Footer() {
           <p className={styles.copy}>
             &copy; {year} Ngürü. Todos los derechos reservados.
           </p>
-          <p className={styles.copy}>
-            Hecho con <span aria-label="amor" className={styles.heart}>♥</span> en la Patagonia
-          </p>
         </div>
       </div>
     </footer>
