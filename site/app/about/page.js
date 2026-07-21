@@ -3,7 +3,7 @@ import WhatsAppButton from '@/components/WhatsAppButton/WhatsAppButton';
 import styles from './about.module.css';
 
 export const metadata = {
-  title: 'Sobre Ngürü',
+  title: 'Sobre Mí',
   description:
     'Conoce el estudio: quién está detrás de Ngürü, el enfoque de trabajo y cómo empezar un proyecto.',
 };

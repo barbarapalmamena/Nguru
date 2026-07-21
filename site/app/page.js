@@ -6,7 +6,9 @@ import WhatsAppButton from '@/components/WhatsAppButton/WhatsAppButton';
 import styles from './home.module.css';
 
 export const metadata = {
-  title: 'Ngürü — Fotografía Comercial, Reels & Branding',
+  title: {
+    absolute: 'Ngürü — Fotografía Comercial, Reels & Branding',
+  },
   description:
     'Estudio creativo de Miguel Fuentes en Frutillar, Los Lagos. Fotografía comercial, producción de Reels & video corporativo y diseño de branding.',
 };

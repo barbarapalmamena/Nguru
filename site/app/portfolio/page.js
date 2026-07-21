@@ -4,7 +4,7 @@ import { projects } from '@/lib/projects';
 import styles from './portfolio.module.css';
 
 export const metadata = {
-  title: 'Portafolio — Ngürü',
+  title: 'Portafolio',
   description:
     'Proyectos de Fotografía Comercial, Reels & Video y Branding realizados por Miguel Fuentes en Frutillar y Chile.',
 };
