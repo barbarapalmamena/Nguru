@@ -190,6 +190,20 @@ export const projects = [
     galleryFolder: 'fotografia domo/restaurant F&F',
     gallery: [],
   },
+  // ── Fotografía Educacional ────────────────────────────────────
+  {
+    slug: 'fotografia-educacional-duoc',
+    title: 'Fotografía Educacional Duoc UC',
+    category: 'educacional',
+    categoryLabel: 'Fotografía Educacional',
+    year: '2025',
+    format: 'Fotografía Institucional / Educacional',
+    image: '/images/Fotos duoc/25 de junio/DSC02750.jpg',
+    alt: 'Fotografía educacional e institucional Duoc UC',
+    description: 'Registro fotográfico de actividades, eventos e instalaciones educativas en Duoc UC.',
+    galleryFolder: 'Fotos duoc/25 de junio',
+    gallery: [],
+  },
   // ── Reels & Video ────────────────────────────────────────────
   {
     slug: 'video-educapro',
